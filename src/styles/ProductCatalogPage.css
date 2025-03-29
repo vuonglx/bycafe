@@ -1,0 +1,130 @@
+.product-catalog-page {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: var(--space-4) 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.catalog-header {
+  text-align: center;
+  margin-bottom: var(--space-5);
+  padding: 0 var(--space-4);
+}
+
+.catalog-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.catalog-header p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.catalog-container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--space-5);
+  padding: 0 var(--space-4);
+}
+
+.filters-panel {
+  position: sticky;
+  top: var(--space-4);
+  align-self: start;
+  background-color: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+}
+
+.filters-panel h2 {
+  font-size: 1.3rem;
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sort-section {
+  margin-top: var(--space-5);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-color);
+}
+
+.sort-section h3 {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-2);
+}
+
+.products-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.search-and-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.search-and-results .search-bar {
+  flex: 1;
+  min-width: 280px;
+}
+
+.results-info {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.results-count {
+  font-weight: 600;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .catalog-container {
+    grid-template-columns: 240px 1fr;
+    gap: var(--space-4);
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .filters-panel {
+    position: static;
+    margin-bottom: var(--space-4);
+  }
+  
+  .catalog-header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .search-and-results {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .catalog-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .catalog-header p {
+    font-size: 1rem;
+  }
+}

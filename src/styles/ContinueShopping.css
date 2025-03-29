@@ -1,0 +1,21 @@
+.continue-shopping {
+  margin-top: var(--space-3);
+}
+
+.continue-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.continue-link:hover {
+  color: var(--primary-dark);
+}
+
+.back-arrow {
+  font-size: 1.2rem;
+}

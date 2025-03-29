@@ -1,0 +1,251 @@
+.store-details {
+  background-color: var(--bg-color);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.store-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-3);
+}
+
+@media (max-width: 576px) {
+  .store-details-header {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+}
+
+.store-info-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.store-info-main h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.store-status {
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.store-status.open {
+  background-color: var(--success-light);
+  color: var(--success);
+}
+
+.store-status.closed {
+  background-color: var(--danger-light);
+  color: var(--danger);
+}
+
+.store-actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.directions-button {
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.store-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: var(--space-3);
+}
+
+.store-tab {
+  padding: var(--space-2) var(--space-3);
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.store-tab.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.store-details-content {
+  min-height: 200px;
+}
+
+.store-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.store-image {
+  width: 100%;
+  height: 150px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.store-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.store-contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.contact-item {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.contact-label {
+  font-weight: 500;
+  min-width: 80px;
+}
+
+.contact-value a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.pickup-info {
+  margin-top: var(--space-2);
+  padding: var(--space-3);
+  background-color: var(--success-light);
+  border-radius: var(--radius-md);
+}
+
+.pickup-info h3 {
+  margin: 0 0 var(--space-2) 0;
+  font-size: 1.1rem;
+  color: var(--success);
+}
+
+.pickup-info p {
+  margin: 0 0 var(--space-2) 0;
+}
+
+.shop-button {
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.store-hours {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.store-hours h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.hours-item {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
+}
+
+.hours-item:nth-child(odd) {
+  background-color: var(--bg-hover);
+}
+
+.hours-item.today {
+  background-color: var(--primary-light);
+  font-weight: 500;
+}
+
+.hours-note {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.store-services {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.store-services h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-2);
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.service-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: var(--success-light);
+  color: var(--success);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.pickup-details {
+  margin-top: var(--space-2);
+  padding: var(--space-3);
+  background-color: var(--bg-hover);
+  border-radius: var(--radius-md);
+}
+
+.pickup-details h4 {
+  margin: 0 0 var(--space-2) 0;
+  font-size: 1rem;
+}
+
+.pickup-details p {
+  margin: 0 0 var(--space-2) 0;
+  font-size: 0.9rem;
+}

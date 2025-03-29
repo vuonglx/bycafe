@@ -1,0 +1,99 @@
+.user-account-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-4);
+}
+
+.user-account-page h1 {
+  margin: 0;
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.account-content {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: var(--space-4);
+}
+
+@media (max-width: 768px) {
+  .account-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.account-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-color);
+  height: fit-content;
+}
+
+.user-greeting {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.user-name {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.account-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.nav-item {
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.nav-item:hover {
+  background-color: var(--bg-hover);
+}
+
+.nav-item.active {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.nav-item.logout {
+  margin-top: var(--space-3);
+  color: var(--danger);
+}
+
+.account-main {
+  padding: var(--space-4);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-color);
+}

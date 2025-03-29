@@ -1,0 +1,27 @@
+/* src/styles/Banner.css */
+.banner {
+    background: linear-gradient(to right, #663399, #7B2CBF);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .banner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .banner button {
+    background: #FFD700;
+    color: #212121;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .banner button:hover {
+    background: #E6C200;
+  }

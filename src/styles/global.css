@@ -1,0 +1,161 @@
+/**
+ * global.css
+ * 
+ * This file contains global styles and CSS variables for the ByCafe e-commerce application.
+ * It defines the design system including colors, spacing, typography, and common UI elements
+ * to ensure consistency across the application.
+ */
+
+/* CSS Variables for the design system */
+:root {
+  /* Primary Colors */
+  --primary-100: #E6E6FA;  /* Lightest */
+  --primary-500: #663399;  /* Base */
+  --primary-700: #4B0082;  /* Darker shade */
+
+  /* Secondary Colors */
+  --secondary-100: #F8F8F8;
+  --secondary-500: #C0C0C0;
+  --secondary-900: #212121;
+
+  /* Semantic Colors */
+  --success: #28a745;
+  --success-light: #d4edda;
+  --warning: #ffc107;
+  --warning-light: #fff3cd;
+  --danger: #dc3545;
+  --danger-light: #f8d7da;
+  --info: #17a2b8;
+  --info-light: #d1ecf1;
+
+  /* UI Colors */
+  --primary: var(--primary-500);
+  --primary-light: var(--primary-100);
+  --primary-dark: var(--primary-700);
+  --text-primary: var(--secondary-900);
+  --text-secondary: #666666;
+  --bg-color: #ffffff;
+  --bg-hover: #f0f0f0;
+  --border-color: #e0e0e0;
+  --border-light: #f0f0f0;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-pill: 9999px;
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: var(--text-primary);
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Layout */
+.main-content {
+  min-height: calc(100vh - 200px); /* Adjust based on header/footer height */
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--space-4);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+/* Grid Layouts */
+.product-grid, .category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--space-4);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    padding: 0 var(--space-2);
+  }
+  
+  .main-content {
+    padding: var(--space-3);
+  }
+}

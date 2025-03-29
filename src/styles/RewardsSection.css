@@ -1,0 +1,190 @@
+.rewards-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.rewards-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-3);
+}
+
+.rewards-header h2 {
+  margin: 0;
+}
+
+.points-available {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--bg-hover);
+  border-radius: var(--radius-md);
+}
+
+.points-label {
+  font-weight: 500;
+}
+
+.points-value {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.rewards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-4);
+}
+
+.reward-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.reward-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.reward-image {
+  height: 150px;
+  overflow: hidden;
+}
+
+.reward-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reward-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  background-color: var(--bg-color);
+  flex-grow: 1;
+}
+
+.reward-name {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.reward-cost {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.reward-description {
+  margin: var(--space-1) 0;
+  color: var(--text-secondary);
+  flex-grow: 1;
+}
+
+.reward-expiry {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-2);
+}
+
+.redeem-button {
+  padding: var(--space-2);
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.redeem-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.redeem-button.disabled {
+  background-color: var(--bg-hover);
+  color: var(--text-secondary);
+  cursor: not-allowed;
+}
+
+.no-rewards {
+  padding: var(--space-4);
+  text-align: center;
+  background-color: var(--bg-color);
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--border-color);
+}
+
+/* Modal styles */
+.redemption-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--bg-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  max-width: 400px;
+  width: 100%;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  margin-bottom: var(--space-3);
+}
+
+.reward-summary {
+  padding: var(--space-3);
+  background-color: var(--bg-hover);
+  border-radius: var(--radius-md);
+  margin: var(--space-3) 0;
+}
+
+.points-after {
+  font-weight: 500;
+  margin-bottom: var(--space-3);
+}
+
+.modal-actions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.confirm-button,
+.cancel-button {
+  flex: 1;
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.confirm-button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+}
+
+.cancel-button {
+  background-color: var(--bg-hover);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}

@@ -1,0 +1,221 @@
+.profile-management {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.profile-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: var(--space-4);
+}
+
+.profile-tab {
+  padding: var(--space-3);
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.profile-tab.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.profile-content h2 {
+  margin: 0 0 var(--space-3) 0;
+  font-size: 1.3rem;
+}
+
+.profile-content h3 {
+  margin: var(--space-3) 0 var(--space-2) 0;
+  font-size: 1.1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-3);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+@media (max-width: 576px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group label {
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  padding: var(--space-2);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.checkbox-group input {
+  margin: 0;
+}
+
+.form-actions {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.save-button,
+.add-payment-button {
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.save-button:hover,
+.add-payment-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.cancel-button {
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--bg-color);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background-color: var(--bg-hover);
+}
+
+/* Address Book */
+.addresses-list,
+.payment-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.address-card,
+.payment-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+.address-header,
+.payment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.address-type,
+.payment-type {
+  font-weight: 500;
+}
+
+.default-badge {
+  font-size: 0.8rem;
+  padding: var(--space-1) var(--space-2);
+  background-color: var(--primary-light);
+  color: var(--primary);
+  border-radius: var(--radius-sm);
+}
+
+.address-details,
+.payment-details {
+  margin: var(--space-2) 0;
+}
+
+.address-details p,
+.payment-details p {
+  margin: var(--space-1) 0;
+}
+
+.address-actions,
+.payment-actions {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: auto;
+}
+
+.edit-button,
+.remove-button {
+  flex: 1;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.remove-button {
+  background-color: var(--bg-color);
+  border: 1px solid var(--danger-light);
+  color: var(--danger);
+}
+
+.add-address,
+.add-payment {
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-light);
+}
+
+.security-note {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.security-icon {
+  font-size: 0.8rem;
+}
